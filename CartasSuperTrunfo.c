@@ -43,6 +43,19 @@ int main() {
     printf("\nAgora qual o PIB dessa cidade: \n");
     scanf("%f", &PIB);
 
+    float PIBpercapita, densidadepopulacional;
+
+    /* 
+    Densidade populacional: população / area 
+    basta dividir matematicamente a população absoluta pela área ocupada por essa população
+    */
+    densidadepopulacional = populacao / area;
+    
+   /* PIB per capita: PIB / população
+   a divisão do PIB pelo número de habitantes de um país, estado ou cidade
+   */
+   PIBpercapita = PIB / populacao;
+
     printf("\nParabéns, as informações da carta foram cadastradas com sucesso!\n");
 
     // Exibindo as informações fornecidas pelo usuário
@@ -55,6 +68,8 @@ int main() {
     printf("Pontos turísticos: %d\n", Pturistico);
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2f\n", PIB);
+    printf("PIB per capita: %f\n", PIBpercapita);
+    printf("Densidade populacional: %.4f pessoas/km²\n", densidadepopulacional);
 
     printf("Cadastro finalizado. Obrigado por usar o sistema!\n");
 

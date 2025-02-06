@@ -6,84 +6,7 @@
 // Siga os comentários para implementar cada parte do desafio.
 //Teste Pedro Fontenele
 
-int main() {
-     printf("***Jogo SUPER TRUNFO***\n");
-
-    char codigo[4]; // Código da carta (ex: A01, B02, etc.)
-
-    printf("\nRegistre o código dessa carta: \n"); 
-    scanf("%s", codigo);
-    
-    printf("\nAgora vamos cadastrar as informações dessa carta\n");
-
-    char pais[15]; // Nome do país
-
-    printf("\nQual o nome do país a ser atribuído para a carta? \n");
-    scanf("%s", pais);
-
-    char estado[15], cidade[15]; // Nome do estado e Nome da cidade que sera cadastradas as informações da carta
-    int populacao, Pturistico;
-    float area, PIB; 
-
-    printf("\nDiga um Estado desse país: \n");
-    scanf("%s", estado);
-
-    printf("\nAgora, uma Cidade desse estado: \n");
-    scanf("%s", cidade);
-
-    printf("\nAgora gostaria que você me falasse a população geral dessa cidade: \n");
-    scanf("%d", &populacao);
-
-    printf("\nAgora, qual o número de pontos turísticos dessa cidade: \n");
-    scanf("%d", &Pturistico);
-
-    printf("\nPoderia me informar a área dessa cidade: \n");
-    scanf("%f", &area);
-
-    printf("\nAgora qual o PIB dessa cidade: \n");
-    scanf("%f", &PIB);
-
-    float PIBpercapita, densidadepopulacional;
-
-    /* 
-    Densidade populacional: população / area 
-    basta dividir matematicamente a população absoluta pela área ocupada por essa população
-    */
-    densidadepopulacional = populacao / area;
-    
-   /* PIB per capita: PIB / população
-   a divisão do PIB pelo número de habitantes de um país, estado ou cidade
-   */
-   PIBpercapita = PIB / populacao;
-
-    printf("\nParabéns, as informações da carta foram cadastradas com sucesso!\n");
-
-    // Exibindo as informações fornecidas pelo usuário
-    printf("\nResumo das informações cadastradas:\n");
-    printf("Código da carta: %s\n", codigo);
-    printf("País: %s\n", pais);
-    printf("Estado: %s\n", estado);
-    printf("Cidade: %s\n", cidade);
-    printf("População: %d\n", populacao);
-    printf("Pontos turísticos: %d\n", Pturistico);
-    printf("Área: %.2f km²\n", area);
-    printf("PIB: %.2f\n", PIB);
-    printf("PIB per capita: %f\n", PIBpercapita);
-    printf("Densidade populacional: %.4f pessoas/km²\n", densidadepopulacional);
-
-    printf("Cadastro finalizado. Obrigado por usar o sistema!\n");
-
-    return 0;
-}
-#include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste Pedro Fontenele
-
-int main() {
+int main(){
     // Cadastro das cartas
     printf("***Jogo SUPER TRUNFO***\n");
 
@@ -97,10 +20,10 @@ int main() {
     printf("\nRegistre o código da PRIMEIRA carta: ");
     scanf("%s", &codigo1);
 
-    printf("\nQual o nome do país da primeira carta?\n ");
+    printf("\nQual o nome do PAÍS da primeira carta?\n");
     scanf("%s", &pais1);
 
-    printf("\nDiga um Estado da primeira carta: \n");
+    printf("\nDiga um ESTADO desse País: \n");
     scanf("%s", &estado1); 
 
     printf("\nDiga uma CIDADE desse Estado: \n");
@@ -118,21 +41,23 @@ int main() {
     printf("\nDiga o PIB dessa cidade: \n");
     scanf("%f", &PIB1);
 
-     /* 
+    /* 
     Densidade populacional: população / area 
     basta dividir matematicamente a população absoluta pela área ocupada por essa população
     */
     densidadepopulacional1 = populacao1 / area1;
 
-    /* PIB per capita: PIB / população
-   a divisão do PIB pelo número de habitantes de um país, estado ou cidade
-   */
+    /* 
+    PIB per capita: PIB / população
+    a divisão do PIB pelo número de habitantes de um país, estado ou cidade
+    */
     PIBpercapita1 = PIB1  / populacao1;
 
     // Calculando a densidade populacional invertida
     float desidadepopulacionalinvertida1 = 1 / densidadepopulacional1;
 
-    /* Super Poder é a soma de todas as propriedades:
+    /* 
+    Super Poder é a soma de todas as propriedades:
     população, área, PIB, PIB per capta e densidade populacional invertida para comparação e número de pontos turísticos
     */ 
     float SuperPoder1= populacao1 + area1 + PIB1 + PIBpercapita1 + desidadepopulacionalinvertida1 + Pturistico1;
@@ -146,7 +71,7 @@ int main() {
     printf("País: %s\n", pais1);
     printf("Estado: %s\n", estado1);
     printf("Cidade: %s\n", cidade1);
-    printf("População: %ul\n", populacao1);
+    printf("População: %u\n", populacao1);
     printf("Pontos turísticos: %d\n", Pturistico1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f\n", PIB1);
@@ -166,10 +91,10 @@ int main() {
     printf("\nRegistre o código da SEGUNDA carta: ");
     scanf("%s", &codigo2);
 
-    printf("\nQual o nome do país da segunda carta?\n");
+    printf("\nQual o nome do PAÍS da segunda carta?\n");
     scanf("%s", &pais2);
 
-    printf("\nDiga um Estado da segunda carta: \n");
+    printf("\nDiga um ESTADO desse País: \n");
     scanf("%s", &estado2); 
 
     printf("\nDiga uma CIDADE desse Estado: \n");
@@ -193,15 +118,17 @@ int main() {
     */
     densidadepopulacional2 = populacao2 / area2;
 
-    /* PIB per capita: PIB / população
-   a divisão do PIB pelo número de habitantes de um país, estado ou cidade
-   */
+    /* 
+    PIB per capita: PIB / população
+    a divisão do PIB pelo número de habitantes de um país, estado ou cidade
+    */
     PIBpercapita2 = PIB2 / populacao2;
 
     // Calculando a densidade populacional invertida
     float desidadepopulacionalinvertida2 = 1 / densidadepopulacional2;
 
-    /* Super Poder é a soma de todas as propriedades:
+    /* 
+    Super Poder é a soma de todas as propriedades:
     população, área, PIB, PIB per capta e densidade populacional invertida para comparação e número de pontos turísticos
     */ 
     float SuperPoder2= populacao2 + area2 + PIB2 + PIBpercapita2 + desidadepopulacionalinvertida2 + Pturistico2;
@@ -209,11 +136,11 @@ int main() {
     // Exibindo informações das cartas
     printf("\nResumo das informações cadastradas\n");
     printf("\nCarta 2\n");
-    printf("Código da carta: %s", codigo2);
+    printf("Código da carta: %s\n", codigo2);
     printf("País: %s\n", pais2);
     printf("Estado: %s\n", estado2);
     printf("Cidade: %s\n", cidade2);
-    printf("População: %ul\n", populacao2);
+    printf("População: %u\n", populacao2);
     printf("Pontos turísticos: %d\n", Pturistico2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f\n", PIB2);
@@ -221,15 +148,28 @@ int main() {
     printf("Densidade populacional: %.4f pessoas/km²\n", densidadepopulacional2);
     printf("Super poder da carta: %f\n", SuperPoder2);
 
-    printf("Cadastro de cartas finalizado.\nVamos agora comparar as cartas cadastradas\n");
+    printf("\nCadastro de cartas finalizado.\n");
 
-    // Pergunta ao usuário se deseja proseguir com a comparação das cartas
-    char resposta;
-    printf("\nVocê gostaria de proseguir para a comparação das cartas? (s/n): ");
-    scanf(" %c", &resposta);
+    //Comparando as cartas
+    printf("\n**Vamos agora comparar as cartas cadastradas**\n");
 
-    if (resposta == 's' || resposta == 'S')
+    int resultadoPopulacao = populacao1 > populacao2;
+    int resultadoArea = area1 > area2;
+    int resultadoPIB = PIB1 > PIB2;
+    int resultadoPIBpercapita = PIBpercapita1 > PIBpercapita2;
+    int resultadoPturistico = Pturistico1 > Pturistico2;
+    int resultadoDensidadePopulacional = densidadepopulacional1 < densidadepopulacional2;
+    int resultadosuperpoder = SuperPoder1 > SuperPoder2;
 
-    printf("porque");
-    
+    printf("\nComparações\nLembre que se o resultado da comparação for 1, a carta 1 ganhou; se o resultado for 0, a carta 2 ganhou.\n");
+    printf("População: %d\n", resultadoPopulacao);
+    printf("Área: %d\n", resultadoArea);
+    printf("PIB: %d\n", resultadoPIB);
+    printf("PIB per capita: %d\n",resultadoPIBpercapita);
+    printf("Quantidade de pontos turísticos: %d\n", resultadoPturistico);
+    printf("Densidade populacional: %d\n", resultadoDensidadePopulacional);
+    printf("Super poder: %d\n", resultadosuperpoder);
+
     return 0;
+
+}
